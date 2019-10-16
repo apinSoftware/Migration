@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-10-10T12:40:42</date>
+  <millis>1570707642116</millis>
+  <sequence>1</sequence>
+  <logger>cisprotonigeriamrs.LogToFile</logger>
+  <level>INFO</level>
+  <class>cisprotonigeriamrs.LogToFile</class>
+  <method>writeLog</method>
+  <thread>33</thread>
+</record>
+Oct 10, 2019 12:40:42 PM cisprotonigeriamrs.LogToFile writeLog
+FINEST: Finnest message: Logger with SIMPLE FORMATTER

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="titleText" prefHeight="981.0" prefWidth="1396.0" stylesheets="@../resources/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.172" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cisprotonigeriamrs.FXMLDocumentController">
+    <children>
+      <ScrollPane layoutX="6.0" layoutY="31.0" prefHeight="715.0" prefWidth="1382.0" visible="false" />
+        <Label id="titleText" fx:id="migrationTitletext" layoutX="520.0" layoutY="131.0" minHeight="16" minWidth="69" prefHeight="58.0" prefWidth="375.0" text="MIGRATE CISPRO TO NIGERIAMRS" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <ImageView fitHeight="58.0" fitWidth="76.0" layoutX="547.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/apinlogo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="633.0" layoutY="40.0" prefHeight="29.0" prefWidth="340.0" text="APIN Public Health Initiatives" textFill="#ebe2e2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="14.0" layoutY="227.0" prefHeight="399.0" prefWidth="1299.0" tabClosingPolicy="UNAVAILABLE" visible="false">
+        <tabs>
+          <Tab text="CisPro Migration" />
+        </tabs>
+      </TabPane>
+  <AnchorPane layoutX="158.0" layoutY="180.0" minHeight="0.0" minWidth="0.0" prefHeight="661.0" prefWidth="1050.0">
+         <children>
+            <AnchorPane layoutX="364.0" layoutY="346.0" prefHeight="166.0" prefWidth="298.0" style="-fx-background-color: #4c4c4c;">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <Label fx:id="clinicalEncounterLabel" layoutX="443.0" layoutY="469.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="completedLabelEncounter" layoutX="407.0" layoutY="519.0" text="Clinical Encounter Completed" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="loadingImageLabel" fitHeight="56.0" fitWidth="41.0" layoutX="602.0" layoutY="552.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/loadingIconBig.gif" />
+               </image>
+            </ImageView>
+            <Label fx:id="moduleProcessing" layoutX="568.0" layoutY="35.0" prefHeight="35.0" prefWidth="394.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="58.0" fitWidth="50.0" layoutX="498.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons-treatment-96.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="migrateClinicalEncounter" layoutX="395.0" layoutY="426.0" mnemonicParsing="false" onAction="#clinicalEncounterBtn" prefHeight="40.0" prefWidth="244.0" style="-fx-background-color: #0b8315;" text="Migrate Clinical Encounters" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <AnchorPane layoutX="684.0" layoutY="345.0" prefHeight="166.0" prefWidth="298.0" style="-fx-background-color: #4c4c4c;">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <ImageView fitHeight="50.0" fitWidth="170.0" layoutX="817.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons-pill-bottle.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="migratePharmacy" layoutX="725.0" layoutY="427.0" mnemonicParsing="false" onAction="#pharmacyBtn" style="-fx-background-color: #0b8315;" text="Migrate Pharmacy Records" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Label fx:id="pharmacyLabel" layoutX="757.0" layoutY="472.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="completedLabelPharmacy" layoutX="734.0" layoutY="515.0" text="Pharmacy Completed" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="57.0" layoutY="344.0" prefHeight="166.0" prefWidth="286.0" style="-fx-background-color: #4c4c4c;">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <Button fx:id="migrateLABID" layoutX="71.0" layoutY="422.0" mnemonicParsing="false" onAction="#labButtonAction" style="-fx-background-color: #0b8315;" text="Migrate Laboratory Records" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Label fx:id="completedLabelLAB" layoutX="108.0" layoutY="515.0" text="LAB Completed" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="68.0" fitWidth="58.0" layoutX="152.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons-microscope.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="53.0" layoutY="123.0" prefHeight="166.0" prefWidth="298.0" style="-fx-background-color: #4c4c4c;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <ImageView fitHeight="76.0" fitWidth="58.0" layoutX="82.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons-sick.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label fx:id="completedLabelBasicInfo" layoutX="90.0" layoutY="294.0" text="Basic Info Completed" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+              <Button fx:id="button" layoutX="74.0" layoutY="202.0" onAction="#handleButtonAction" prefHeight="29.0" prefWidth="219.0" style="-fx-background-color: #0b8315;" text="Migrate Patient Basic Information" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <AnchorPane layoutX="365.0" layoutY="123.0" prefHeight="166.0" prefWidth="297.0" style="-fx-background-color: #4c4c4c;">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <Button fx:id="migrateAdultICEBtn" layoutX="393.0" layoutY="201.0" mnemonicParsing="false" onAction="#adultICEBtnAction" prefHeight="40.0" prefWidth="244.0" style="-fx-background-color: #0b8315;" text="Migrate Adult Clinical Initial Evaluation" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Label fx:id="adultClinicalEvalLabel" layoutX="435.0" layoutY="242.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="completedLabelAdultICE" layoutX="453.0" layoutY="292.0" text="Adult ICE Completed" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="53.0" fitWidth="50.0" layoutX="473.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons-adult-user.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="684.0" layoutY="122.0" prefHeight="166.0" prefWidth="298.0" style="-fx-background-color: #4c4c4c;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <ImageView fitHeight="41.0" fitWidth="50.0" layoutX="125.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons-babys-room.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button fx:id="migratePediatricICEBtn" layoutX="714.0" layoutY="197.0" mnemonicParsing="false" onAction="#pediatricICEBtnAction" prefHeight="25.0" prefWidth="244.0" style="-fx-background-color: #0b8315;" text="Migrate Pediatric Clinical Initial Eval" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Label fx:id="pediatricClinicalEvalLabel" layoutX="748.0" layoutY="238.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="completedLabelPediatricICE" layoutX="771.0" layoutY="288.0" text="Pediatric ICE Completed" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="adultTotal" layoutX="564.0" layoutY="241.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="pedTotal" layoutX="883.0" layoutY="237.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="laboratoryLabel" layoutX="120.0" layoutY="468.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="labTotal" layoutX="250.0" layoutY="467.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="clinicalTotal" layoutX="576.0" layoutY="473.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="pharmacyTotal" layoutX="891.0" layoutY="476.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="patientBasicInfoLabel" layoutX="117.0" layoutY="247.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="patientsTotal" layoutX="220.0" layoutY="246.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+          <AnchorPane layoutX="-83.0" layoutY="-41.0" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+            <Label layoutX="393.0" layoutY="16.0" text="Migartion to NigeriaMRS" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <MenuBar prefHeight="32.0" prefWidth="722.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#resetAllMenu" text="reset all" />
+                  <MenuItem fx:id="demo" mnemonicParsing="false" onAction="#demomenu" text="reset demographics" />
+                  <MenuItem fx:id="aicfmenu" mnemonicParsing="false" onAction="#adulticfmenu" text="reset adult icforms" />
+                  <MenuItem fx:id="pedicfmenu" mnemonicParsing="false" onAction="#pedicfmenu" text="reset ped icforms" />
+                  <MenuItem fx:id="labmenu" mnemonicParsing="false" onAction="#labmenu" text="reset lab records" />
+                  <MenuItem fx:id="cemenu" mnemonicParsing="false" onAction="#enmenu" text="reset ped iencounter" />
+                  <MenuItem fx:id="pharmacymenu" mnemonicParsing="false" onAction="#pharmacymenu" text="reset pharmacy" />
+                  <MenuItem mnemonicParsing="false" onAction="#closeStage" text="Close" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Button fx:id="backBtn" layoutX="586.0" layoutY="872.0" mnemonicParsing="false" onAction="#handlebackBTN" prefHeight="25.0" prefWidth="244.0" style="-fx-background-color: #0b8315;" text="GO BACK HOME" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+    </children>
+</AnchorPane>
